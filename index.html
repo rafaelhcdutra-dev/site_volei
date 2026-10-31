@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Rotações de Vôlei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>🏐 Rotações de vôlei</h1>
+        <p class="sub">Monte o 5x1, 4x2 ou 6x0, dê nome a cada função e simule a recepção e as jogadas com a regra de
+            posição (sobreposição) da FIVB.</p>
+        <div class="grid">
+            <section class="card">
+                <div class="row" id="sysBtns"></div>
+                <div class="row"><button id="prev" aria-label="Rotação anterior">◀</button>
+                    <div class="row" id="rotBtns" style="margin:0"></div><button id="next"
+                        aria-label="Próxima rotação">▶</button>
+                </div>
+                <div class="row" id="phBtns"></div>
+                <div class="net"></div>
+                <div class="court" id="court">
+                    <div class="atk"></div>
+                    <div class="ball" id="ball"></div>
+                </div>
+                <div class="info" id="info"></div>
+                <div class="row" id="plays" style="max-width:520px;margin:10px auto 0"></div>
+                <div class="msg" id="msg"></div>
+            </section>
+            <section class="card">
+                <h2>Líbero</h2>
+                <label class="chk"><input type="checkbox" id="libOn"> Usar líbero</label>
+                <div id="replBox">
+                    <div style="font-size:.85rem;color:var(--mut);margin-bottom:4px">Líbero substitui quando estes
+                        jogadores estão no fundo:</div>
+                    <div id="repl"></div>
+                </div>
+                <h2 style="margin-top:12px">Nomes</h2>
+                <div id="names"></div>
+                <button id="clear">Limpar nomes</button>
+            </section>
+        </div>
+        <section class="card" style="margin-top:14px">
+            <h2>Todas as rotações</h2>
+            <div class="scroll">
+                <table id="tbl"></table>
+            </div>
+            <p class="note">A rotação gira no sentido horário: P2 → P1 → P6 → P5 → P4 → P3 → P2. A R1 é a formação
+                inicial. Em destaque amarelo na quadra e em negrito na tabela está o levantador da vez.</p>
+            <p class="note">Líbero (FIVB): joga só no fundo, não ataca acima da altura da rede e não bloqueia. Ele sai
+                quando o jogador substituído iria para a linha de frente. A regra de o líbero sacar varia por
+                competição, confira o regulamento da sua liga.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
